@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { CoinContext } from '../../context/CoinContext';
+import { Link } from 'react-router-dom';
 // Style Component
 import './Navbar.css';
 // Images Connections
@@ -32,10 +33,14 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <img className="logo" src={logo} alt="" />
+      <Link to={'/'}>
+        <img className="logo" src={logo} alt="" />
+      </Link>
 
       <ul>
-        <li>Home</li>
+        <Link to={'/'}>
+          <li>Home</li>
+        </Link>
         <li>Features</li>
         <li>Pricing</li>
         <li>Blog</li>
