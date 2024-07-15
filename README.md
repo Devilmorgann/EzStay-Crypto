@@ -3,7 +3,7 @@ A crypto price tracking app build with reactjs.
 
 # 💡About this project 
 
-....
+I built crypto price tracking app, I completely recommending this application if you are crypto investment. Because this application user interface is so friendly. When you enter this application first face crypto table and you can search whatever you want, if you can click some crypto name you'll face some information. You'll follow to easly crypto behavior in this application.
 
 ## ⚡Technologies
 
