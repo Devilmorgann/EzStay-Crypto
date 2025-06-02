@@ -5,7 +5,8 @@ import './Footer.css';
 const Footer = () => {
   return (
     <div className="footer">
-      <h1>Copyright @ 2024, Crypto Price Tracking Application</h1>
+      <h1>Copyright @ 2025 All rights Reserve</h1>
+      <h1>Made by Surya 😎 with ❤️‍🔥</h1>
     </div>
   );
 };

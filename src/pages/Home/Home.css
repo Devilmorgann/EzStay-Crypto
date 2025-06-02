@@ -13,9 +13,36 @@
   gap: 30px;
 }
 
+/* Typing animation effect for the H1 in .hero */
 .hero h1 {
-  font-size: max(4vw, 36px);
+  font-size: max(4vw, 36px); /* Dynamic font size */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  display: inline-block;
+  border-right: 3px solid #42A5F5;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3.5s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
 }
+
+/* Keyframes for typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 22ch; /* Adjust this to match the number of characters in your text */
+  }
+}
+
+/* Keyframes for blinking cursor effect */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 
 .hero p {
   width: 75%;

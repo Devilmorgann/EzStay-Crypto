@@ -10,21 +10,20 @@ const CoinContextProvider = (props) => {
   });
 
   const fetchAllCoin = async () => {
-    const options = {
-      method: 'GET',
-      headers: {
-        accept: 'application/json',
-        'x-cg-demo-api-key': 'CG-8n9xZhH1qwShPfWPWtR35Qnh',
-      },
-    };
+    try {
+      const response = await fetch(
+        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`
+      );
 
-    fetch(
-      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`,
-      options
-    )
-      .then((response) => response.json())
-      .then((response) => setAllCoin(response))
-      .catch((err) => console.error(err));
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      setAllCoin(data);
+    } catch (err) {
+      console.error('Error fetching coin data:', err);
+    }
   };
 
   useEffect(() => {
